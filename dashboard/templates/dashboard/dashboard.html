@@ -637,7 +637,7 @@
 		top: 475px;
 		--web-animation: fadein 0.3s ease-out;
 		--web-action-type: page;
-		--web-action-target: Jobs__Splash_Page___1.html;
+		--web-action-target: dashboard.html;
 		cursor: pointer;
 	}
 	#Apply__Refer_someone {
@@ -4482,9 +4482,11 @@ window.application = new Application();
 		<rect onclick="application.goToTargetView(event)" id="Rectangle_71" rx="6" ry="6" x="0" y="0" width="155" height="30">
 		</rect>
 	</svg>
-	<div id="Apply__Refer_someone">
-		<span>Apply | Refer someone</span>
-	</div>
+	<a href="{% url 'interview_schedule:Schedule' %}">
+		<div id="Apply__Refer_someone">
+			<span>Apply | Refer someone</span>
+		</div>
+	</a>
 	<svg class="Rectangle_72">
 		<rect id="Rectangle_72" rx="16" ry="16" x="0" y="0" width="296" height="311">
 		</rect>

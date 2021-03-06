@@ -1,7 +1,6 @@
 from pprint import pprint
 from Google import Create_Service, convert_to_RFC_datetime
 
-
 CLIENT_SECRET_FILE = 'client_secret.json'
 API_NAME = 'calendar'
 API_VERSION = 'v3'
@@ -15,11 +14,11 @@ event = {
   'location': '800 Howard St., San Francisco, CA 94103',
   'description': 'A chance to hear more about Google\'s developer products.',
   'start': {
-    'dateTime': convert_to_RFC_datetime(2021,3,6,9,0),
+    'dateTime': convert_to_RFC_datetime(2021, 3, 6, 9, 0),
     'timeZone': 'America/Los_Angeles',
   },
   'end': {
-    'dateTime': convert_to_RFC_datetime(2021,3,6,13,0),
+    'dateTime': convert_to_RFC_datetime(2021, 3, 6, 13, 0),
     'timeZone': 'America/Los_Angeles',
   },
   'recurrence': [

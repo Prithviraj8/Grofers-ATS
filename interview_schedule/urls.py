@@ -6,4 +6,5 @@ app_name = "interview_schedule"
 
 urlpatterns = [
     path('', schedule_views.schedule_interviews, name='Schedule'),
+    path('calendar_events/', schedule_views.view_calendar, name='CalendarEvent')
 ]

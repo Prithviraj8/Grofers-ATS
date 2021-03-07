@@ -3,6 +3,15 @@ cachetools==4.2.1
 certifi==2020.12.5
 chardet==4.0.0
 Django==3.1.7
+beautifulsoup4==4.9.3
+bootstrap4==0.1.0
+cachetools==4.2.1
+certifi==2020.12.5
+chardet==4.0.0
+Django==3.1.6
+django-bootstrap-datepicker-plus==3.0.5
+django-bootstrap4==2.3.1
+django-forms-bootstrap==3.1.0
 google-api-core==1.26.1
 google-api-python-client==2.0.2
 google-auth==1.27.1
@@ -11,6 +20,7 @@ google-auth-oauthlib==0.4.3
 googleapis-common-protos==1.53.0
 httplib2==0.19.0
 idna==2.10
+importlib-metadata==2.1.1
 oauthlib==3.1.0
 packaging==20.9
 protobuf==3.15.5
@@ -25,3 +35,8 @@ six==1.15.0
 sqlparse==0.4.1
 uritemplate==3.0.1
 urllib3==1.26.3
+soupsieve==2.2
+sqlparse==0.4.1
+uritemplate==3.0.1
+urllib3==1.26.3
+zipp==3.4.1

@@ -24,7 +24,7 @@ def create_event():
         'timeZone': 'Asia/Kolkata',
       },
       'attendees': [
-        {'email': 'siddharth.ext@grofers.com'},
+        {'email': 'prithviraj.ext@grofers.com'},
       ],
       'reminders': {
         'useDefault': False,
@@ -34,5 +34,5 @@ def create_event():
         ],
       },
     }
-    event = service.events().insert(calendarId='prithviraj.ext@grofers.com', body=event).execute()
+    event = service.events().insert(calendarId='primary', body=event).execute()
     print('Event created: %s' % (event.get('htmlLink')))

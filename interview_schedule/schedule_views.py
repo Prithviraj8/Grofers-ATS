@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from Calendar import list_events, create_event
 from .models import interviewer
+from interviews_log.models import interview
 from .forms import CreateEventForm
 from django import forms
 
@@ -27,6 +28,7 @@ def create_event_(request):
         if form.is_valid():
             create_event.create_event()
         print("form ", form)
-        return render(request, 'interviews_log/interviews.html')
+        interviews = interview.objects.all()
+        return render(request, 'interviews_log/interviews.html', {"interviews": interviews})
     return render(request, 'calendarEvents/calendarEvents.html', {'form': form})
 

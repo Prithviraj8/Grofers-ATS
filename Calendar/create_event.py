@@ -3,7 +3,7 @@ from Calendar.Google import Create_Service, convert_to_RFC_datetime
 
 
 def create_event():
-    CLIENT_SECRET_FILE = 'client_secret.json'
+    CLIENT_SECRET_FILE = 'Calendar/client_secret.json'
     API_NAME = 'calendar'
     API_VERSION = 'v3'
     SCOPES = ['https://www.googleapis.com/auth/calendar']
@@ -34,5 +34,5 @@ def create_event():
         ],
       },
     }
-    event = service.events().insert(calendarId='siddharth.ext@grofers.com', body=event).execute()
+    event = service.events().insert(calendarId='primary', body=event).execute()
     print('Event created: %s' % (event.get('htmlLink')))

@@ -21,8 +21,8 @@ def view_calendar(request):
 
 
 def create_event_(request):
+    form = CreateEventForm(request.POST)
     if request.method == 'POST':
-        form = CreateEventForm(request.POST)
         if form.is_valid():
             print("in is valid")
             create_event.create_event()

@@ -41,7 +41,14 @@ INSTALLED_APPS = [
     'home_app',
     'dashboard',
     'interview_schedule',
+    'bootstrap_datepicker_plus',
+    'django_forms_bootstrap',
+    'bootstrap4'
 ]
+
+BOOTSTRAP4 = {
+    'include_jquery': True,
+}
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',

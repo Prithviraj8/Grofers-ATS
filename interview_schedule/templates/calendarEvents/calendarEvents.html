@@ -1,0 +1,34 @@
+{% load bootstrap4 %}       {# import bootstrap4/bootstrap3 #}
+{% bootstrap_css %}         {# Embed Bootstrap CSS #}
+{% bootstrap_javascript jquery='full' %}  {# Embed Bootstrap JS+jQuery #}
+{{ form.media }}            {# Adds date-picker required JS and CSS #}
+
+{% for interviewer in interviewers %}
+{{interviewer.name}}
+{% endfor %}
+
+<!--{{events}}-->
+{% for event in events %}
+<br>
+{%if event.start %}
+<h3> Start - {{event.start}}</h3>
+<h3> End - {{event.end}}</h3>
+{% endif %}
+{% endfor %}
+
+<form action="{% url 'interview_schedule:CreateEvent' %}" method="post">
+    {% csrf_token %}
+    {{ form }}
+<!--    <label for="range_start">Range Start</label>-->
+<!--    <input type="datetime-local" id="range_start">-->
+<!--    <br>-->
+<!--    <label for="range_end">Range End</label>-->
+<!--    <input type="datetime-local" id="range_end">-->
+<!--    <br>-->
+<!--    {{ form }}-->
+<!--    <input type="submit" value="Submit">-->
+
+    <button type="submit">
+        Send Invite
+    </button>
+</form>

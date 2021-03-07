@@ -119,3 +119,5 @@ supply-orchestrator-tracker/supply_orchestrator_tracker/.tool-versions
 
 HackdayTool_venv
 .vscode
+
+Calendar/token_calendar_v3.pickle

@@ -41,9 +41,10 @@ INSTALLED_APPS = [
     'home_app',
     'dashboard',
     'interview_schedule',
+    'interviews_log',
     'bootstrap_datepicker_plus',
     'django_forms_bootstrap',
-    'bootstrap4'
+    'bootstrap4',
 ]
 
 BOOTSTRAP4 = {

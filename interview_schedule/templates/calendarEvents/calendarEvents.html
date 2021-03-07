@@ -19,15 +19,6 @@
 <form action="{% url 'interview_schedule:CreateEvent' %}" method="post">
     {% csrf_token %}
     {{ form }}
-<!--    <label for="range_start">Range Start</label>-->
-<!--    <input type="datetime-local" id="range_start">-->
-<!--    <br>-->
-<!--    <label for="range_end">Range End</label>-->
-<!--    <input type="datetime-local" id="range_end">-->
-<!--    <br>-->
-<!--    {{ form }}-->
-<!--    <input type="submit" value="Submit">-->
-
     <button type="submit">
         Send Invite
     </button>

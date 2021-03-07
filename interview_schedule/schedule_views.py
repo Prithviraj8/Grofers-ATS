@@ -1,6 +1,7 @@
-from django.shortcuts import render
+from django.shortcuts import render, redirect
 from Calendar import list_events, create_event
-from interview_schedule.models import interviewer
+from .models import interviewer
+from interviews_log.models import interview
 from .forms import CreateEventForm
 from django import forms
 
@@ -21,12 +22,13 @@ def view_calendar(request):
 
 
 def create_event_(request):
+    print("CREATING EVETN ")
     form = CreateEventForm(request.POST)
     if request.method == 'POST':
         if form.is_valid():
-            print("in is valid")
             create_event.create_event()
-        print("request data ", request.POST)
         print("form ", form)
+        interviews = interview.objects.all()
+        return render(request, 'interviews_log/interviews.html', {"interviews": interviews})
     return render(request, 'calendarEvents/calendarEvents.html', {'form': form})
 

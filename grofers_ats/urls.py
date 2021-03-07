@@ -23,4 +23,5 @@ urlpatterns = [
     path('signup/', home_views.sign_up, name='SignUp'),
     path('dashboard/', include("dashboard.urls")),
     path('schedule/', include("interview_schedule.urls")),
+    path('interviews/', include("interviews_log.urls")),
 ]

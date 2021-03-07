@@ -29,7 +29,7 @@ def create_event_(request):
         if form.is_valid():
             print(" REQUEST ", request.POST)
             time_start = request.POST['time_start']
-            time_end = request.POST['time_start']
+            time_end = request.POST['time_end']
             validated_time = validate(time_start, time_end)
             create_event.create_event(validated_time)
 

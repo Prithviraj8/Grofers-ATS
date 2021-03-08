@@ -36,4 +36,3 @@ def create_event_(request):
         interviews = interview.objects.all()
         return render(request, 'interviews_log/interviews.html', {"interviews": interviews})
     return render(request, 'calendarEvents/calendarEvents.html', {'form': form})
-

@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+{% load static %}
 <html>
 <head>
 <meta charset="utf-8"/>
@@ -4360,7 +4360,7 @@ window.application = new Application();
 	<div id="XYZ">
 		<span>XYZ</span>
 	</div>
-	<img id="My_Image" src="/Users/prithvirajmurthy/Desktop/Grofers/Hackathon_2021/Grofers-ATS/dashboard/static/dashboard/My_Image.png" srcset="/Users/prithvirajmurthy/Desktop/Grofers/Hackathon_2021/Grofers-ATS/dashboard/static/dashboard/My_Image.png 1x, /Users/prithvirajmurthy/Desktop/Grofers/Hackathon_2021/Grofers-ATS/dashboard/static/dashboard/My_Image@2x.png 2x">
+	<img id="My_Image" src="{% static 'dashboard/My_Image@2x.png' %}" srcset="{% static 'dashboard/My_Image.png' %} 1x, {% static 'dashboard/My_Image@2x.png' %} 2x">
 		
 	<div id="Prithviraj_Murthy">
 		<span>Prithviraj Murthy</span>
